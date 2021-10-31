@@ -64,7 +64,9 @@ class Misc(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    @commands.command(aliases=["cv", "coronavirus"], description="Says the covid stats of the country")
+    @commands.command(
+        aliases=["cv", "coronavirus"], description="Says the covid stats of the country"
+    )
     async def covid(self, ctx, *, country: str = "None"):
         country = country.title()
 
