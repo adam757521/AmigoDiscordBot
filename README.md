@@ -1,7 +1,5 @@
-<center>
-    <h1>Amigo Discord Bot</h1>
-    <p>A rewrite version of Amigo, my first discord bot written in JS.</p>
-</center>
+<h1 align="center" >Amigo Discord Bot</h1>
+<p align="center">A rewrite version of Amigo, my first discord bot written in JS.</p>
 
 Features
 --------
