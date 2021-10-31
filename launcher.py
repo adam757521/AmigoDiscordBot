@@ -6,7 +6,7 @@ import bot
 
 def main():
     amigo_bot = bot.AmigoBot(
-        bot.Account.TOKEN, command_prefix=".", intents=discord.Intents.all()
+        bot.Account.TOKEN, command_prefix=".", intents=discord.Intents.all(), help_command=None
     )
 
     discordSuperUtils.CommandHinter(amigo_bot)

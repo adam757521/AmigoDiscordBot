@@ -27,11 +27,11 @@ class Misc(commands.Cog):
             .set_author(name=title, icon_url=author.avatar_url)
         )
 
-    @commands.command()
+    @commands.command(description="Says the text")
     async def say(self, ctx, *, test: commands.clean_content):
         await ctx.send(test)
 
-    @commands.command()
+    @commands.command(description="Finds the member's dick length")
     async def dicklength(self, ctx, member: discord.Member):
         await ctx.send(
             embed=self.generate_embed(
@@ -42,13 +42,13 @@ class Misc(commands.Cog):
             )
         )
 
-    @commands.command()
+    @commands.command(description="Shows the ping to the discord websocket")
     async def ping(self, ctx):
         await ctx.send(
             f"Pong! :ping_pong: ping is {round(self.bot.ws.latency * 1000)}."
         )
 
-    @commands.command()
+    @commands.command(description="Calculates the member's gay percentage")
     async def gaycalculate(self, ctx, member: discord.Member):
         gay_percentage = random.randint(0, 100)
 
@@ -64,7 +64,7 @@ class Misc(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    @commands.command(aliases=["cv", "coronavirus"])
+    @commands.command(aliases=["cv", "coronavirus"], description="Says the covid stats of the country")
     async def covid(self, ctx, *, country: str = "None"):
         country = country.title()
 
@@ -117,7 +117,7 @@ class Misc(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    @commands.command()
+    @commands.command(description="Calculates the sus percentage of the member")
     async def sussycalculator(self, ctx, member: discord.Member):
         sus_dict = {
             90: "You are an Imposter!",
