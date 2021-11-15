@@ -15,7 +15,7 @@ def main():
     discordSuperUtils.CommandHinter(amigo_bot)
     # Initializes the discordSuperUtils command hinter on the bot.
 
-    amigo_bot.run()
+    amigo_bot.run(cogs_directory="bot/cogs")
 
 
 if __name__ == "__main__":
